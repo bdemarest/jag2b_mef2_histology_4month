@@ -119,8 +119,8 @@ p2 = ggplot(tab, aes(y=pct_area_gfp, x=section_id2_fct,
                      color=genotype)) +
      geom_point()
 
-# To do: plot like p2, but plot mean, median, range.     
-# To do: facets where each fish_id is in a separate panel.
+# [X] To do: plot like p2, but plot mean, median, range.     
+# [X] To do: facets where each fish_id is in a separate panel.
 
 by_section = tab[, list(mean_area=mean(area_um_sq),
                         median_area=median(area_um_sq),
@@ -154,9 +154,109 @@ p3 = ggplot(data=by_section,
      facet_grid(cols=vars(fish_id2_fct), space="free_x",
                 scales="free_x")
 
-ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221129.pdf", plot=p3, width=12, height=6)        
+## ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221129.pdf", plot=p3, width=12, height=6)        
+
+# To do: 
+# 1. [ ] Add mean and median summary lines for each panel (fish_id)
+# 2. [ ] Create plot of summarized area (one value per fish_id)
+# 3. [ ] Anova for summarized area values.
+
+
+by_fish = by_section[,
+   list(mean_of_means_area=mean(mean_area),
+        median_of_medians_area=median(median_area)),
+   by=list(fish_id2_fct, genotype2)]
+
+# Summary plot of 5 values per section, with 
+# overall per-fish mean and median values.
+
+genotype_colors = c("wt"="#80b1d3",
+                    "het"="#b3de69",
+                    "mut"="#fb8072")
+
+p4 = ggplot() +
+     theme_bw() +
+     geom_hline(data=by_fish,
+                aes(yintercept=mean_of_means_area),
+                linewidth=1.0,
+                color="grey30") +
+     geom_hline(data=by_fish,
+                aes(yintercept=median_of_medians_area),
+                linewidth=1.0,
+                color="grey30",
+                linetype="21") +
+     geom_linerange(data=by_section,
+                    aes(x=section_id2_fct,
+                        color=genotype2,
+                        min=min_area,
+                        max=max_area),
+                    linewidth=0.65) +
+     geom_point(data=by_section,
+                aes(x=section_id2_fct,
+                    color=genotype2,
+                    y=mean_area), 
+                size=3) +
+     geom_point(data=by_section,
+                aes(x=section_id2_fct,
+                    color=genotype2,
+                    y=median_area), 
+                size=3, 
+                shape=21,
+                fill="white") +
+     scale_color_manual(values=genotype_colors) +
+     theme(axis.text.x=element_text(angle=90, 
+                                    vjust=0.5, 
+                                    size = rel(0.8))) +
+     labs(title="Jag2b heart area histology. 4-month old. Mef2 antibody.") +
+     labs(subtitle="Per-fish mean = solid horizontal line, per-fish median = dashed line,\nPer-section mean = solid dots, per-section median = open dots,\nPer-section min and max = vertical solid line.") +
+     labs(x="Section ID (2 - 7 sections per fish)") +
+     labs(y="Myocardium Area (square microns)") +
+     labs(color="Genotype") +
+     facet_grid(cols=vars(fish_id2_fct), space="free_x",
+                scales="free_x")
+
+ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221201_v2.pdf", plot=p4, width=14, height=4)        
+
+by_genotype = by_fish[, list(genotype_mean=mean(mean_of_means_area),
+                             genotype_sd=sd(mean_of_means_area)),
+                      by=genotype2]
+
+p5 = ggplot() +
+     theme_bw() +
+     geom_point(data=by_fish,
+                aes(x=genotype2, 
+                    y=mean_of_means_area,
+                    color=genotype2),
+                size=1.6) +
+     geom_segment(data=by_genotype,
+                  aes(y=genotype_mean,
+                      yend=genotype_mean,
+                      x=as.integer(genotype2) - 0.2,
+                      xend=as.integer(genotype2) + 0.2,
+                      color=genotype2),
+                  linewidth=1.2) +
+     geom_errorbar(data=by_genotype,
+                   aes(x=genotype2,
+                       ymin=genotype_mean - genotype_sd,
+                       ymax=genotype_mean + genotype_sd,
+                       color=genotype2),
+                   linewidth=0.65,
+                   width=0.15) +
+     scale_color_manual(values=genotype_colors) +
+     labs(title="Jag2b heart area histology. 4-month old.") +
+     labs(subtitle="Horizontal bar = mean\nWhiskers = +/- standard deviation\nSolid dots = per-fish mean-of-means summary") +
+     labs(x=NULL) +
+     labs(y="Myocardium Area (square microns)") +
+     labs(color="Genotype")   
+
+
+ggsave(filename="jag2b_4month_mef2_all_fish_by_genotype_20221201.pdf", plot=p5, width=4, height=4)        
 
 ```
+
+
+
+
 
 ```{r}
 # Print plots in html output
@@ -164,8 +264,29 @@ p1
 
 p3
 
+p4
+
+p5
 
 ```
+
+
+
+
+```{r}
+# Anova, by genotype, using per-fish mean of means.
+
+anova_res = anova(lm(mean_of_means_area ~ genotype2, data=by_fish))
+anova_res
+
+t_test_res = t.test(mean_of_means_area ~ genotype2, 
+                    data=by_fish[genotype2 != "het"])
+
+t_test_res
+
+
+```
+
 
 
 

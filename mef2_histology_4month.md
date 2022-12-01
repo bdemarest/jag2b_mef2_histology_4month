@@ -45,7 +45,7 @@ xtab1 %>% as_tibble() %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#sgrbsbbuna .gt_table {
+#bxyycqflql .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -73,7 +73,7 @@ xtab1 %>% as_tibble() %>%
   /* table.border.bottom.color */
 }
 
-#sgrbsbbuna .gt_heading {
+#bxyycqflql .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -92,7 +92,7 @@ xtab1 %>% as_tibble() %>%
   /* heading.border.lr.color */
 }
 
-#sgrbsbbuna .gt_title {
+#bxyycqflql .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -106,7 +106,7 @@ xtab1 %>% as_tibble() %>%
   border-bottom-width: 0;
 }
 
-#sgrbsbbuna .gt_subtitle {
+#bxyycqflql .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -120,7 +120,7 @@ xtab1 %>% as_tibble() %>%
   border-top-width: 0;
 }
 
-#sgrbsbbuna .gt_bottom_border {
+#bxyycqflql .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -129,7 +129,7 @@ xtab1 %>% as_tibble() %>%
   /* heading.border.bottom.color */
 }
 
-#sgrbsbbuna .gt_column_spanner {
+#bxyycqflql .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -137,7 +137,7 @@ xtab1 %>% as_tibble() %>%
   padding-bottom: 4px;
 }
 
-#sgrbsbbuna .gt_col_headings {
+#bxyycqflql .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -164,7 +164,7 @@ xtab1 %>% as_tibble() %>%
   /* column_labels.border.lr.color */
 }
 
-#sgrbsbbuna .gt_col_heading {
+#bxyycqflql .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -180,11 +180,11 @@ xtab1 %>% as_tibble() %>%
   overflow-x: hidden;
 }
 
-#sgrbsbbuna .gt_sep_right {
+#bxyycqflql .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#sgrbsbbuna .gt_group_heading {
+#bxyycqflql .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -223,7 +223,7 @@ xtab1 %>% as_tibble() %>%
   vertical-align: middle;
 }
 
-#sgrbsbbuna .gt_empty_group_heading {
+#bxyycqflql .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -247,20 +247,20 @@ xtab1 %>% as_tibble() %>%
   vertical-align: middle;
 }
 
-#sgrbsbbuna .gt_striped {
+#bxyycqflql .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#sgrbsbbuna .gt_from_md > :first-child {
+#bxyycqflql .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#sgrbsbbuna .gt_from_md > :last-child {
+#bxyycqflql .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#sgrbsbbuna .gt_row {
+#bxyycqflql .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -290,7 +290,7 @@ xtab1 %>% as_tibble() %>%
   overflow-x: hidden;
 }
 
-#sgrbsbbuna .gt_stub {
+#bxyycqflql .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -307,7 +307,7 @@ xtab1 %>% as_tibble() %>%
   padding-left: 12px;
 }
 
-#sgrbsbbuna .gt_summary_row {
+#bxyycqflql .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -321,7 +321,7 @@ xtab1 %>% as_tibble() %>%
   padding-right: 5px;
 }
 
-#sgrbsbbuna .gt_first_summary_row {
+#bxyycqflql .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -336,7 +336,7 @@ xtab1 %>% as_tibble() %>%
   /* summary_row.border.color */
 }
 
-#sgrbsbbuna .gt_grand_summary_row {
+#bxyycqflql .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -350,7 +350,7 @@ xtab1 %>% as_tibble() %>%
   padding-right: 5px;
 }
 
-#sgrbsbbuna .gt_first_grand_summary_row {
+#bxyycqflql .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -365,7 +365,7 @@ xtab1 %>% as_tibble() %>%
   /* grand_summary_row.border.color */
 }
 
-#sgrbsbbuna .gt_table_body {
+#bxyycqflql .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -380,7 +380,7 @@ xtab1 %>% as_tibble() %>%
   /* table_body.border.bottom.color */
 }
 
-#sgrbsbbuna .gt_footnotes {
+#bxyycqflql .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -404,7 +404,7 @@ xtab1 %>% as_tibble() %>%
   /* footnotes.border.lr.color */
 }
 
-#sgrbsbbuna .gt_footnote {
+#bxyycqflql .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -412,7 +412,7 @@ xtab1 %>% as_tibble() %>%
   /* footnotes.padding */
 }
 
-#sgrbsbbuna .gt_sourcenotes {
+#bxyycqflql .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -436,48 +436,48 @@ xtab1 %>% as_tibble() %>%
   /* source_notes.border.lr.style */
 }
 
-#sgrbsbbuna .gt_sourcenote {
+#bxyycqflql .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#sgrbsbbuna .gt_left {
+#bxyycqflql .gt_left {
   text-align: left;
 }
 
-#sgrbsbbuna .gt_center {
+#bxyycqflql .gt_center {
   text-align: center;
 }
 
-#sgrbsbbuna .gt_right {
+#bxyycqflql .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#sgrbsbbuna .gt_font_normal {
+#bxyycqflql .gt_font_normal {
   font-weight: normal;
 }
 
-#sgrbsbbuna .gt_font_bold {
+#bxyycqflql .gt_font_bold {
   font-weight: bold;
 }
 
-#sgrbsbbuna .gt_font_italic {
+#bxyycqflql .gt_font_italic {
   font-style: italic;
 }
 
-#sgrbsbbuna .gt_super {
+#bxyycqflql .gt_super {
   font-size: 65%;
 }
 
-#sgrbsbbuna .gt_footnote_marks {
+#bxyycqflql .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="sgrbsbbuna" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="bxyycqflql" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -834,7 +834,7 @@ xtab2 %>% as_tibble() %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#cswsmnwdew .gt_table {
+#xwkdsynhgu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -862,7 +862,7 @@ xtab2 %>% as_tibble() %>%
   /* table.border.bottom.color */
 }
 
-#cswsmnwdew .gt_heading {
+#xwkdsynhgu .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -881,7 +881,7 @@ xtab2 %>% as_tibble() %>%
   /* heading.border.lr.color */
 }
 
-#cswsmnwdew .gt_title {
+#xwkdsynhgu .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -895,7 +895,7 @@ xtab2 %>% as_tibble() %>%
   border-bottom-width: 0;
 }
 
-#cswsmnwdew .gt_subtitle {
+#xwkdsynhgu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -909,7 +909,7 @@ xtab2 %>% as_tibble() %>%
   border-top-width: 0;
 }
 
-#cswsmnwdew .gt_bottom_border {
+#xwkdsynhgu .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -918,7 +918,7 @@ xtab2 %>% as_tibble() %>%
   /* heading.border.bottom.color */
 }
 
-#cswsmnwdew .gt_column_spanner {
+#xwkdsynhgu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -926,7 +926,7 @@ xtab2 %>% as_tibble() %>%
   padding-bottom: 4px;
 }
 
-#cswsmnwdew .gt_col_headings {
+#xwkdsynhgu .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -953,7 +953,7 @@ xtab2 %>% as_tibble() %>%
   /* column_labels.border.lr.color */
 }
 
-#cswsmnwdew .gt_col_heading {
+#xwkdsynhgu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -969,11 +969,11 @@ xtab2 %>% as_tibble() %>%
   overflow-x: hidden;
 }
 
-#cswsmnwdew .gt_sep_right {
+#xwkdsynhgu .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#cswsmnwdew .gt_group_heading {
+#xwkdsynhgu .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -1012,7 +1012,7 @@ xtab2 %>% as_tibble() %>%
   vertical-align: middle;
 }
 
-#cswsmnwdew .gt_empty_group_heading {
+#xwkdsynhgu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1036,20 +1036,20 @@ xtab2 %>% as_tibble() %>%
   vertical-align: middle;
 }
 
-#cswsmnwdew .gt_striped {
+#xwkdsynhgu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#cswsmnwdew .gt_from_md > :first-child {
+#xwkdsynhgu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cswsmnwdew .gt_from_md > :last-child {
+#xwkdsynhgu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cswsmnwdew .gt_row {
+#xwkdsynhgu .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -1079,7 +1079,7 @@ xtab2 %>% as_tibble() %>%
   overflow-x: hidden;
 }
 
-#cswsmnwdew .gt_stub {
+#xwkdsynhgu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -1096,7 +1096,7 @@ xtab2 %>% as_tibble() %>%
   padding-left: 12px;
 }
 
-#cswsmnwdew .gt_summary_row {
+#xwkdsynhgu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -1110,7 +1110,7 @@ xtab2 %>% as_tibble() %>%
   padding-right: 5px;
 }
 
-#cswsmnwdew .gt_first_summary_row {
+#xwkdsynhgu .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -1125,7 +1125,7 @@ xtab2 %>% as_tibble() %>%
   /* summary_row.border.color */
 }
 
-#cswsmnwdew .gt_grand_summary_row {
+#xwkdsynhgu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -1139,7 +1139,7 @@ xtab2 %>% as_tibble() %>%
   padding-right: 5px;
 }
 
-#cswsmnwdew .gt_first_grand_summary_row {
+#xwkdsynhgu .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -1154,7 +1154,7 @@ xtab2 %>% as_tibble() %>%
   /* grand_summary_row.border.color */
 }
 
-#cswsmnwdew .gt_table_body {
+#xwkdsynhgu .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -1169,7 +1169,7 @@ xtab2 %>% as_tibble() %>%
   /* table_body.border.bottom.color */
 }
 
-#cswsmnwdew .gt_footnotes {
+#xwkdsynhgu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -1193,7 +1193,7 @@ xtab2 %>% as_tibble() %>%
   /* footnotes.border.lr.color */
 }
 
-#cswsmnwdew .gt_footnote {
+#xwkdsynhgu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -1201,7 +1201,7 @@ xtab2 %>% as_tibble() %>%
   /* footnotes.padding */
 }
 
-#cswsmnwdew .gt_sourcenotes {
+#xwkdsynhgu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -1225,48 +1225,48 @@ xtab2 %>% as_tibble() %>%
   /* source_notes.border.lr.style */
 }
 
-#cswsmnwdew .gt_sourcenote {
+#xwkdsynhgu .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#cswsmnwdew .gt_left {
+#xwkdsynhgu .gt_left {
   text-align: left;
 }
 
-#cswsmnwdew .gt_center {
+#xwkdsynhgu .gt_center {
   text-align: center;
 }
 
-#cswsmnwdew .gt_right {
+#xwkdsynhgu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cswsmnwdew .gt_font_normal {
+#xwkdsynhgu .gt_font_normal {
   font-weight: normal;
 }
 
-#cswsmnwdew .gt_font_bold {
+#xwkdsynhgu .gt_font_bold {
   font-weight: bold;
 }
 
-#cswsmnwdew .gt_font_italic {
+#xwkdsynhgu .gt_font_italic {
   font-style: italic;
 }
 
-#cswsmnwdew .gt_super {
+#xwkdsynhgu .gt_super {
   font-size: 65%;
 }
 
-#cswsmnwdew .gt_footnote_marks {
+#xwkdsynhgu .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="cswsmnwdew" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="xwkdsynhgu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1667,8 +1667,8 @@ p2 = ggplot(tab, aes(y=pct_area_gfp, x=section_id2_fct,
                      color=genotype)) +
      geom_point()
 
-# To do: plot like p2, but plot mean, median, range.     
-# To do: facets where each fish_id is in a separate panel.
+# [X] To do: plot like p2, but plot mean, median, range.     
+# [X] To do: facets where each fish_id is in a separate panel.
 
 by_section = tab[, list(mean_area=mean(area_um_sq),
                         median_area=median(area_um_sq),
@@ -1707,7 +1707,103 @@ p3 = ggplot(data=by_section,
     ## ℹ Please use `linewidth` instead.
 
 ``` r
-ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221129.pdf", plot=p3, width=12, height=6)        
+## ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221129.pdf", plot=p3, width=12, height=6)        
+
+# To do: 
+# 1. [ ] Add mean and median summary lines for each panel (fish_id)
+# 2. [ ] Create plot of summarized area (one value per fish_id)
+# 3. [ ] Anova for summarized area values.
+
+
+by_fish = by_section[,
+   list(mean_of_means_area=mean(mean_area),
+        median_of_medians_area=median(median_area)),
+   by=list(fish_id2_fct, genotype2)]
+
+# Summary plot of 5 values per section, with 
+# overall per-fish mean and median values.
+
+genotype_colors = c("wt"="#80b1d3",
+                    "het"="#b3de69",
+                    "mut"="#fb8072")
+
+p4 = ggplot() +
+     theme_bw() +
+     geom_hline(data=by_fish,
+                aes(yintercept=mean_of_means_area),
+                linewidth=1.0,
+                color="grey30") +
+     geom_hline(data=by_fish,
+                aes(yintercept=median_of_medians_area),
+                linewidth=1.0,
+                color="grey30",
+                linetype="21") +
+     geom_linerange(data=by_section,
+                    aes(x=section_id2_fct,
+                        color=genotype2,
+                        min=min_area,
+                        max=max_area),
+                    linewidth=0.65) +
+     geom_point(data=by_section,
+                aes(x=section_id2_fct,
+                    color=genotype2,
+                    y=mean_area), 
+                size=3) +
+     geom_point(data=by_section,
+                aes(x=section_id2_fct,
+                    color=genotype2,
+                    y=median_area), 
+                size=3, 
+                shape=21,
+                fill="white") +
+     scale_color_manual(values=genotype_colors) +
+     theme(axis.text.x=element_text(angle=90, 
+                                    vjust=0.5, 
+                                    size = rel(0.8))) +
+     labs(title="Jag2b heart area histology. 4-month old. Mef2 antibody.") +
+     labs(subtitle="Per-fish mean = solid horizontal line, per-fish median = dashed line,\nPer-section mean = solid dots, per-section median = open dots,\nPer-section min and max = vertical solid line.") +
+     labs(x="Section ID (2 - 7 sections per fish)") +
+     labs(y="Myocardium Area (square microns)") +
+     labs(color="Genotype") +
+     facet_grid(cols=vars(fish_id2_fct), space="free_x",
+                scales="free_x")
+
+ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221201_v2.pdf", plot=p4, width=14, height=4)        
+
+by_genotype = by_fish[, list(genotype_mean=mean(mean_of_means_area),
+                             genotype_sd=sd(mean_of_means_area)),
+                      by=genotype2]
+
+p5 = ggplot() +
+     theme_bw() +
+     geom_point(data=by_fish,
+                aes(x=genotype2, 
+                    y=mean_of_means_area,
+                    color=genotype2),
+                size=1.6) +
+     geom_segment(data=by_genotype,
+                  aes(y=genotype_mean,
+                      yend=genotype_mean,
+                      x=as.integer(genotype2) - 0.2,
+                      xend=as.integer(genotype2) + 0.2,
+                      color=genotype2),
+                  linewidth=1.2) +
+     geom_errorbar(data=by_genotype,
+                   aes(x=genotype2,
+                       ymin=genotype_mean - genotype_sd,
+                       ymax=genotype_mean + genotype_sd,
+                       color=genotype2),
+                   linewidth=0.65,
+                   width=0.15) +
+     scale_color_manual(values=genotype_colors) +
+     labs(title="Jag2b heart area histology. 4-month old.") +
+     labs(subtitle="Horizontal bar = mean\nWhiskers = +/- standard deviation\nSolid dots = per-fish mean-of-means summary") +
+     labs(x=NULL) +
+     labs(y="Myocardium Area (square microns)") +
+     labs(color="Genotype")   
+
+
+ggsave(filename="jag2b_4month_mef2_all_fish_by_genotype_20221201.pdf", plot=p5, width=4, height=4)        
 ```
 
 ``` r
@@ -1722,6 +1818,51 @@ p3
 ```
 
 ![](mef2_histology_4month_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+
+``` r
+p4
+```
+
+![](mef2_histology_4month_files/figure-gfm/unnamed-chunk-7-3.png)<!-- -->
+
+``` r
+p5
+```
+
+![](mef2_histology_4month_files/figure-gfm/unnamed-chunk-7-4.png)<!-- -->
+
+``` r
+# Anova, by genotype, using per-fish mean of means.
+
+anova_res = anova(lm(mean_of_means_area ~ genotype2, data=by_fish))
+anova_res
+```
+
+    ## Analysis of Variance Table
+    ## 
+    ## Response: mean_of_means_area
+    ##           Df   Sum Sq Mean Sq F value Pr(>F)
+    ## genotype2  2 10576161 5288081  1.8663 0.2162
+    ## Residuals  8 22667306 2833413
+
+``` r
+t_test_res = t.test(mean_of_means_area ~ genotype2, 
+                    data=by_fish[genotype2 != "het"])
+
+t_test_res
+```
+
+    ## 
+    ##  Welch Two Sample t-test
+    ## 
+    ## data:  mean_of_means_area by genotype2
+    ## t = -1.7658, df = 6.6819, p-value = 0.1228
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -4434.0839   663.8796
+    ## sample estimates:
+    ##  mean in group wt mean in group mut 
+    ##          30102.53          31987.63
 
 ### Methods notes:
 
