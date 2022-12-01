@@ -1,0 +1,184 @@
+---
+title: "Jag2b mutant histology - 4 month mef2 IHC"
+author: "Bradley Demarest"
+date: "2022-11-30"
+output: github_document
+
+---
+
+#### jag2b heart muscle density data.
+
+jag2b mutants, hets, and wildtype siblings were euthanized with tricaine, hearts were explanted and placed in KCl solution, then fixed and embedded for cryo-sectioning. Sections were stained with mef2 primary ab and detected with a gpf-conjugated(??) secondary ab. (Needs confirmation from who??).
+
+Stained sections were imaged with (what scope??).
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+library(data.table)
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(gt)
+
+```
+
+
+
+
+```{r}
+# Load data.
+tab = readxl::read_excel("mef2_histology_analysis_jag2b_4_month_2022-11-17_modified.xlsx")
+
+tab = as.data.table(tab)
+
+# Remove rows where notes columns contains 'ripped do not use'.
+tab = tab[!notes %in% "ripped do not use"]
+
+# Remove rows where fish_id is NA.
+tab = tab[!is.na(fish_id)]
+
+```
+
+```{r}
+# Check to see how many sections per fish_id,
+# and how many measurements per section.
+
+# We need to use 'file_id' column to create an identifier that
+# has a unique value for each measurement 
+# (each 650px X 650px area of interest).
+
+xtab1 = tab[, .N, by=list(fish_id, file_id, section_id, genotype)]
+
+xtab1 %>% as_tibble() %>%
+  group_by(fish_id, file_id) %>%
+  gt()
+
+```
+
+```{r}
+# Create unique measurment id column.
+# Need to use: fish_id, file_id, section_id, measurement_id.
+
+tab[, id2:=paste(fish_id, "_", file_id, "_S", 
+                 section_id, "_M", measurement_id, 
+                 sep="")]
+
+length(unique(tab$id2))
+
+# Unique identifier for each section.
+tab[, section_id2:=paste(file_id, section_id, sep="_")]
+
+# fish_id2 with genotype included.
+tab[, fish_id2:=paste(genotype, fish_id, sep="_")]
+
+
+
+```
+
+```{r}
+
+# Number of sections per fish_id
+xtab2 = tab[, .N, by=list(fish_id2, fish_id, genotype, section_id2)]
+
+xtab2 %>% as_tibble() %>%
+  group_by(fish_id2) %>%
+  gt()
+
+
+
+# Summarize to one row per fish_id.
+xtab3 = xtab2[, list(sections_per_fish_id=.N), 
+              by=list(fish_id, fish_id2, genotype)]
+xtab3[, genotype2:=factor(genotype, levels=c("wt", "het", "mut"))]
+
+setorder(xtab3, genotype2, fish_id)
+
+table(xtab3$genotype)
+# het mut  wt 
+#   2   5   4  
+
+```
+
+```{r}
+# Plots of individual measurement values.
+p1 = ggplot(tab, aes(y=pct_area_gfp, x=section_id2)) +
+     geom_point() +
+     facet_wrap(facets=vars(fish_id2))
+
+
+# Sort x-axis by fish_id2, by manually sorting section_id2.
+xtab2[, genotype2:=factor(genotype, levels=c("wt", "het", "mut"))]
+setorder(xtab2, genotype2, fish_id)
+
+tab[, section_id2_fct:=factor(section_id2, levels=xtab2$section_id2)]
+
+tab[, fish_id2_fct:=factor(fish_id2, levels=xtab3$fish_id2)]
+tab[, genotype2:=factor(genotype, levels=c("wt", "het", "mut"))]
+
+p2 = ggplot(tab, aes(y=pct_area_gfp, x=section_id2_fct,
+                     color=genotype)) +
+     geom_point()
+
+# To do: plot like p2, but plot mean, median, range.     
+# To do: facets where each fish_id is in a separate panel.
+
+by_section = tab[, list(mean_area=mean(area_um_sq),
+                        median_area=median(area_um_sq),
+                        min_area=min(area_um_sq),
+                        max_area=max(area_um_sq)),
+                 by=list(genotype2, fish_id2_fct, 
+                         section_id2_fct)]
+
+# Sort section_id by mean_area, within each panel.
+setorder(by_section, fish_id2_fct, mean_area)
+
+# Re-create section_id2_fct to follow the new sort order.
+by_section[, section_id2_fct:=factor(
+  as.character(section_id2_fct),
+  levels=as.character(section_id2_fct))]
+
+
+p3 = ggplot(data=by_section,
+            aes(x=section_id2_fct,
+                color=genotype2)) +
+     theme_bw() +
+     geom_linerange(aes(min=min_area,
+                        max=max_area),
+                    size=0.8) +
+     geom_point(aes(y=mean_area), 
+                size=3) +
+     geom_point(aes(y=median_area), 
+                size=3, 
+                shape=21,
+                fill="white") +
+     facet_grid(cols=vars(fish_id2_fct), space="free_x",
+                scales="free_x")
+
+ggsave(filename="jag2b_4month_mef2_all_meas_by_sectionid_20221129.pdf", plot=p3, width=12, height=6)        
+
+```
+
+```{r}
+# Print plots in html output
+p1
+
+p3
+
+
+```
+
+
+
+
+
+
+
+
+
+### Methods notes:
+
+From Abdul-Wajid S, Demarest BL, Yost HJ. Loss of embryonic neural crest derived cardiomyocytes causes adult onset hypertrophic cardiomyopathy in zebrafish. Nat Commun. 2018.
+
+> "Antibody staining for Mef2 (Abcam 64644) on ventricle sections was carried out on 4% PFA + PBS, fixed adult hearts that were cryosectioned into 10 μm sections. Sections were boiled in citrate buffer for \~40 min, washed with PBS + 0.3% Triton x100 (PBT), blocked with PBT + 5% goat serum, 1% DMSO, and 5 μg/ml BSA. Antibody staining was carried out at 1:200 in blocking solution overnight at 4 °C. Washes used PBT and secondary antibody staining utilized AlexaFluor 568 goat anti-rabbit (1:500, Invitrogen) in blocking solution."
+
+> "Measurements of cardiomyocyte coverage in adult ventricle sections were generated using Image J software. GFP fluorescence, demarcating cardiomyocytes in the myocardium, in adult ventricle sections were thresholded for a uniform value of intensity and then applied across all samples. A uniform area ROI selection was used across all section samples to generate the total area and then area of the ROI covered in GFP fluorescence was used as the percent of ventricle area covered in cardiomyocytes."
